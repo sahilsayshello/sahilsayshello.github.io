@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0b0f17" />
+    <meta
+            name="description"
+            content="Sahil Kumar Singh — Senior Software Engineer (Backend)"
+    />
+
+    <title>Sahil Kumar Singh | Senior Software Engineer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+            rel="stylesheet"
+    />
+
+    <style>
+        :root {
+          --bg: #0b0f17;
+          --panel: #0f1623;
+          --text: #e7ecf5;
+          --muted: #a7b0c0;
+          --border: rgba(231, 236, 245, 0.12);
+          --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+          --accent: #7c3aed; /* purple */
+        }
+
+        .duration {
+            font-size: 12px;
+            color: var(--muted);
+            font-weight: 400;
+            margin-left: 8px;
+            opacity: 0.85;
+        }
+        * {
+          box-sizing: border-box;
+        }
+
+        html,
+        body {
+          height: 100%;
+        }
+
+        /* Experience (keep same typography + muted text, no shine) */
+.exp-list{
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.exp-item{
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+}
+
+.exp-head{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.exp-title{
+  font-size: 15px;            /* same as .item h3 */
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.exp-duration{
+  font-size: 12px;
+  color: var(--muted);
+  opacity: 0.9;
+  white-space: nowrap;
+}
+
+.exp-desc{
+  margin: 8px 0 0;
+  font-size: 14px;            /* same as .item p / .small */
+  color: var(--muted);
+}
+        body {
+          margin: 0;
+          font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+            sans-serif;
+          background: radial-gradient(
+              900px 500px at 15% 10%,
+              rgba(124, 58, 237, 0.22),
+              transparent 55%
+            ),
+            radial-gradient(
+              900px 500px at 85% 20%,
+              rgba(99, 102, 241, 0.18),
+              transparent 55%
+            ),
+            var(--bg);
+          color: var(--text);
+          line-height: 1.55;
+        }
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        .container {
+          width: min(1040px, calc(100% - 32px));
+          margin: 0 auto;
+        }
+
+        .nav {
+          position: sticky;
+          top: 0;
+          z-index: 10;
+          backdrop-filter: blur(10px);
+          background: rgba(11, 15, 23, 0.7);
+          border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 14px 0;
+        }
+
+        .brand {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          font-weight: 700;
+          letter-spacing: 0.2px;
+        }
+
+        .dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, var(--accent), #60a5fa);
+          box-shadow: 0 0 0 6px rgba(124, 58, 237, 0.12);
+        }
+
+        .nav-links {
+          display: flex;
+          gap: 18px;
+          align-items: center;
+          font-size: 14px;
+          color: var(--muted);
+        }
+
+        .nav-links a:hover {
+          color: var(--text);
+        }
+
+        .hero {
+          padding: 44px 0 26px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 22px;
+            align-items: stretch; /* was start */
+        }
+
+        /* NEW: make the left hero card fill available height neatly */
+        .hero-grid > .card {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+
+        /* NEW: fill the visual gap with a "Quick snapshot" block */
+        .hero-extra {
+          margin-top: 16px;
+          padding-top: 14px;
+          border-top: 1px solid var(--border);
+          display: grid;
+          gap: 10px;
+        }
+
+        .hero-extra h2 {
+          margin: 0;
+          font-size: 14px;
+          color: var(--text);
+        }
+
+        .hero-bullets {
+          margin: 0;
+          padding-left: 18px;
+          color: var(--muted);
+          font-size: 14px;
+        }
+
+        .hero-bullets li {
+          margin: 6px 0;
+        }
+
+        .hero-pills {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-top: 4px;
+        }
+
+        .pill {
+          font-size: 12px;
+          color: rgba(231, 236, 245, 0.9);
+          border: 1px solid var(--border);
+          background: rgba(255, 255, 255, 0.04);
+          padding: 6px 10px;
+          border-radius: 999px;
+        }
+
+        @media (max-width: 880px) {
+          .nav-inner {
+            gap: 12px;
+          }
+
+          .nav-links {
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+          }
+
+          .hero-grid {
+            grid-template-columns: 1fr;
+          }
+
+          /* NEW: avoid awkward stretching on mobile */
+          .hero-grid > .card {
+            height: auto;
+          }
+        }
+
+        .card {
+          background: rgba(15, 22, 35, 0.9);
+          border: 1px solid var(--border);
+          border-radius: 18px;
+          box-shadow: var(--shadow);
+        }
+
+        .card-pad {
+          padding: 22px;
+        }
+
+        .kicker {
+          color: var(--muted);
+          font-size: 13px;
+          letter-spacing: 0.4px;
+          text-transform: uppercase;
+        }
+
+        h1 {
+          margin: 8px 0 6px;
+          font-size: clamp(28px, 4vw, 44px);
+          line-height: 1.15;
+        }
+
+        .subtitle {
+          margin: 0;
+          color: var(--muted);
+        }
+
+        .cta-row {
+          margin-top: 18px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+        }
+
+        .btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          padding: 10px 14px;
+          border-radius: 12px;
+          border: 1px solid var(--border);
+          background: rgba(255, 255, 255, 0.04);
+          color: var(--text);
+          font-weight: 600;
+          font-size: 14px;
+        }
+
+        .btn:hover {
+          border-color: rgba(124, 58, 237, 0.6);
+          box-shadow: 0 0 0 6px rgba(124, 58, 237, 0.12);
+        }
+
+        .btn.primary {
+          background: linear-gradient(135deg, var(--accent), #2563eb);
+          border-color: transparent;
+        }
+
+        .btn.primary:hover {
+          box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.18);
+        }
+
+        .btn.icon {
+          width: 44px;
+          padding: 10px;
+        }
+
+        .btn svg {
+          width: 18px;
+          height: 18px;
+        }
+
+        /* ===== GLOBAL TYPE SCALE (NEW) ===== */
+
+body {
+  font-size: 15px;   /* base text slightly smaller */
+}
+
+/* Paragraph text everywhere */
+p,
+.small,
+.hero-bullets,
+.timeline-card p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Section headings */
+.section-title {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* Experience company title */
+.timeline-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+}
+        .avatar {
+          display: grid;
+          gap: 14px;
+        }
+
+        .avatar-img {
+          width: 100%;
+          aspect-ratio: 4 / 3;
+          max-height: 420px;
+          border-radius: 16px;
+          border: 1px solid var(--border);
+          background: linear-gradient(
+              135deg,
+              rgba(124, 58, 237, 0.25),
+              rgba(96, 165, 250, 0.12)
+            ),
+            url("./sahil.jpg");
+          background-size: cover;
+          background-position: center;
+          box-shadow: var(--shadow);
+        }
+
+        .small {
+          font-size: 14px;
+          color: var(--muted);
+          margin: 0;
+        }
+
+        section {
+          padding: 18px 0;
+        }
+
+        .section-title {
+          margin: 0 0 10px;
+          font-size: 18px;
+        }
+
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          gap: 14px;
+        }
+
+        .col-6 {
+          grid-column: span 6;
+        }
+
+        .col-12 {
+          grid-column: span 12;
+        }
+
+        @media (max-width: 880px) {
+          .col-6 {
+            grid-column: span 12;
+          }
+        }
+
+        ul.clean {
+          margin: 10px 0 0;
+          padding: 0;
+          list-style: none;
+          display: grid;
+          gap: 10px;
+        }
+
+
+        .item {
+          padding: 14px;
+          border-radius: 14px;
+          border: 1px solid var(--border);
+          background: rgba(255, 255, 255, 0.03);
+        }
+
+        .item h3 {
+          margin: 0 0 4px;
+          font-size: 15px;
+        }
+
+        .item p {
+          margin: 0;
+          color: var(--muted);
+          font-size: 14px;
+        }
+
+        .exp-edu {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 40px;
+}
+
+.education-block {
+  padding-left: 18px;
+  border-left: 1px solid var(--border);
+}
+
+@media (max-width: 900px) {
+  .exp-edu {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .education-block {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+  }
+}
+
+        .footer {
+          padding: 26px 0 34px;
+          color: var(--muted);
+          font-size: 13px;
+        }
+
+        .mono {
+          font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+            "Liberation Mono", "Courier New", monospace;
+        }
+
+        /* Accessibility */
+        :focus-visible {
+          outline: 2px solid rgba(124, 58, 237, 0.8);
+          outline-offset: 2px;
+          border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<header class="nav">
+    <div class="container">
+        <div class="nav-inner">
+            <div class="brand">
+                <span class="dot" aria-hidden="true"></span>
+                <span>Sahil Kumar Singh</span>
+            </div>
+
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <div class="hero-grid">
+            <div class="card card-pad">
+                <div class="kicker">Senior Software Engineer · Backend</div>
+                <h1>Problem Solver.</h1>
+
+                <p class="subtitle">
+                    Backend engineer building distributed systems, and high-reliability integrations at scale.
+                </p>
+
+                <!-- Cleaner: no visible raw links -->
+                <div class="cta-row" aria-label="Primary actions">
+                    <a class="btn primary" href="#contact">Contact</a>
+
+                    <a
+                            class="btn icon"
+                            href="mailto:sahilsinghsks@gmail.com?subject=Hello%20Sahil&body=Hi%20Sahil%2C%0A%0A"
+                            onclick="window.location.href=this.href; return false;"
+                            aria-label="Email"
+                            title="Email"
+                    >
+                        <!-- Mail icon -->
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                    d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"
+                            />
+                        </svg>
+                    </a>
+                    <a
+                            class="btn icon"
+                            href="https://linkedin.com/in/sahilju"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="LinkedIn"
+                            title="LinkedIn"
+                    >
+                        <!-- LinkedIn icon -->
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.48-.9 1.66-1.85 3.42-1.85 3.66 0 4.33 2.41 4.33 5.54v6.2ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"
+                            />
+                        </svg>
+                    </a>
+
+                    <a
+                            class="btn icon"
+                            href="https://github.com/sahilsayshello"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="GitHub"
+                            title="GitHub"
+                    >
+                        <!-- GitHub icon -->
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                    d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.8 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.66-.31-5.46-1.34-5.46-5.95 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.56.12-3.25 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.69.24 2.94.12 3.25.77.84 1.24 1.91 1.24 3.22 0 4.62-2.8 5.64-5.47 5.94.43.38.82 1.12.82 2.26v3.35c0 .32.22.69.83.58A12 12 0 0 0 12 .5Z"
+                            />
+                        </svg>
+                    </a>
+
+
+
+                    <a
+                            class="btn icon"
+                            href="https://www.instagram.com/grou_ndzeroreporting/"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="Instagram"
+                            title="Instagram"
+                    >
+                        <!-- Instagram icon -->
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M7.75 2C4.68 2 2 4.68 2 7.75v8.5C2 19.32 4.68 22 7.75 22h8.5C19.32 22 22 19.32 22 16.25v-8.5C22 4.68 19.32 2 16.25 2h-8.5Zm0 2h8.5A3.75 3.75 0 0 1 20 7.75v8.5A3.75 3.75 0 0 1 16.25 20h-8.5A3.75 3.75 0 0 1 4 16.25v-8.5A3.75 3.75 0 0 1 7.75 4ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm4.5-.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/>
+                        </svg>
+                    </a>
+                    <a
+                            class="btn"
+                            href="https://drive.google.com/file/d/1bz_cHch95m5f2FJdtAXiCF-n7hFYTwkj/view"
+                            target="_blank"
+                            rel="noreferrer"
+                    >
+                        Resume
+                    </a>
+
+
+                </div>
+
+                <!-- NEW: fills the left-card empty gap nicely -->
+                <div class="hero-extra">
+                    <h2>Quick snapshot</h2>
+
+                    <ul class="hero-bullets">
+                        <li>Backend engineer focused on reliability, scale, and clean abstractions.</li>
+                        <li>Experience across lending + financial systems + partner integrations.</li>
+                        <li>Strong bias for observability: tracing, metrics, and production-grade debugging.</li>
+                    </ul>
+
+                    <div class="hero-pills" aria-label="Interests">
+                        <span class="pill">Travel</span>
+                        <span class="pill">Music</span>
+                        <span class="pill">Gaming</span>
+                    </div>
+                </div>
+
+                <p class="small" style="margin-top: 14px">
+                </p>
+            </div>
+
+            <aside class="avatar">
+                <div class="avatar-img" role="img" aria-label="Sahil photo"></div>
+
+                <div class="card card-pad">
+                    <p class="small">
+                        <strong style="color: var(--text)">Focus areas</strong><br />
+                        Distributed systems · Event-driven architecture · Financial systems ·
+                        Partner integrations · Security hardening
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="card card-pad">
+            <h2 class="section-title">About</h2>
+
+            <p class="small">
+                Senior Software Engineer specializing in backend engineering. Designed distributed systems, event-driven architectures, and high-reliability
+                integration platforms across finance, lending, and large-scale consumer products.
+                <br /><br />
+                Previously a founding engineer on a lending platform at Grab, led Finance Engineering
+                at Quince, and currently working on partner integrations and security hardening for
+                HBO’s aggregation platform at Warner Bros. Discovery.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="card card-pad">
+            <h2 class="section-title">Skills</h2>
+
+            <ul class="clean">
+                <li class="item">
+                    <h3>Backend & Distributed Systems</h3>
+                    <p>Kotlin, Golang, Java, C++, Microservices, Event-driven systems</p>
+                </li>
+
+                <li class="item">
+                    <h3>Data, Messaging & APIs</h3>
+                    <p>MySQL, Redis, Kafka, gRPC, REST</p>
+                </li>
+
+                <li class="item">
+                    <h3>Cloud, Infra & Observability</h3>
+                    <p>AWS, Terraform, IAM governance, Datadog, security hardening</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="card card-pad">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="grid">
+                <div class="col-6 item">
+                    <h3>Lending Platform</h3>
+                    <p>
+                        Founding engineer architecting lending services, event-driven integrations with
+                        Credit Bureau Singapore (CBS), and automated workflows for limit revisions,
+                        account blocking/unblocking, and closures.
+                    </p>
+                </div>
+
+                <div class="col-6 item">
+                    <h3>Digicard Core Service</h3>
+                    <p>
+                        Designed and built <span class="mono">digicard-core</span>, a core service abstracting
+                        card issuance, activation, and transactions across multiple card programs.
+                    </p>
+                </div>
+
+                <div class="col-6 item">
+                    <h3>Configurable Chargebacks</h3>
+                    <p>
+                        Built backend for configurable chargebacks with vendor-specific split logic, and
+                        re-architected bulk manual adjustment pipelines for performance and reliability.
+                    </p>
+                </div>
+
+                <div class="col-6 item">
+                    <h3>Partner Integration & Security Hardening</h3>
+                    <p>
+                        Designed structured error classification (retriable vs non-retriable) to standardize
+                        partner-facing <span class="mono">error_notification</span> events; contributed to platform-wide
+                        security hardening and Terraform compliance improvements.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="card card-pad">
+            <div class="exp-edu">
+
+                <!-- LEFT: Experience -->
+                <div>
+                    <h2 class="section-title">Experience</h2>
+
+                    <ul class="exp-list">
+                        <li class="exp-item">
+                            <div class="exp-head">
+                                <div class="exp-title">Warner Bros. Discovery — Senior Software Engineer</div>
+                                <div class="exp-duration">Jun ’25 – Present</div>
+                            </div>
+                            <p class="exp-desc">
+                                Platform integration; structured error classification to standardize partner error notifications;
+                                security hardening for HBO LATAM aggregation platform (vulnerability remediation, IAM governance,
+                                Terraform compliance, decommissioning legacy components).
+                            </p>
+                        </li>
+
+                        <li class="exp-item">
+                            <div class="exp-head">
+                                <div class="exp-title">Quince — SDE-2</div>
+                                <div class="exp-duration">Apr ’24 – May ’25</div>
+                            </div>
+                            <p class="exp-desc">
+                                Solely led Finance Engineering vertical end-to-end; built configurable chargebacks and improved
+                                financial processing pipelines for performance and reliability.
+                            </p>
+                        </li>
+
+                        <li class="exp-item">
+                            <div class="exp-head">
+                                <div class="exp-title">Grab — Software Engineer</div>
+                                <div class="exp-duration">Mar ’21 – Apr ’24</div>
+                            </div>
+                            <p class="exp-desc">
+                                Founding engineer on lending platform; designed event-driven credit bureau integration and automated
+                                workflows; built tooling to generate and persist 10M+ unique account numbers; delivered extensive test
+                                coverage (1000+ unit/integration tests).
+                            </p>
+                        </li>
+
+                        <li class="exp-item">
+                            <div class="exp-head">
+                                <div class="exp-title">Stad — Backend Engineer</div>
+                                <div class="exp-duration">2022</div>
+                            </div>
+                            <p class="exp-desc">
+                                Built a monolithic backend from scratch powering user profiles, content sharing, real-time chat, and
+                                social graph features for a gaming platform.
+                            </p>
+                        </li>
+
+                        <li class="exp-item" style="margin-bottom: 0;">
+                            <div class="exp-head">
+                                <div class="exp-title">IIT Kanpur — Research Intern</div>
+                                <div class="exp-duration">Jun – Jul 2019</div>
+                            </div>
+                            <p class="exp-desc">
+                                Developed a Human–Machine Interface (HMI) for a 4WS-4WD electric vehicle prototype enabling conventional
+                                driving maneuvers with three primary input parameters.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- RIGHT: Education -->
+                <aside class="education-block">
+                    <h2 class="section-title">Education</h2>
+
+                    <div class="timeline-card">
+                        <h3>Jadavpur University</h3>
+                        <p>
+                            B.E. Instrumentation & Electronics<br />
+                            <span class="mono">2017 – 2021</span> · SGPA:
+                            <span class="mono">8.38</span>
+                        </p>
+                    </div>
+
+                    <div class="cta-row edu-actions" style="margin-top: 14px">
+                        <a
+                                class="btn primary"
+                                href="https://drive.google.com/file/d/1bz_cHch95m5f2FJdtAXiCF-n7hFYTwkj/view"
+                                target="_blank"
+                                rel="noreferrer"
+                        >
+                            View Resume
+                        </a>
+
+                        <a class="btn" href="#projects">
+                            Explore Projects →
+                        </a>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="card card-pad">
+            <h2 class="section-title">Contact</h2>
+
+            <p class="small" style="margin-top: 0">
+                Prefer email for quick responses.
+            </p>
+
+            <div class="cta-row" aria-label="Contact links">
+                <a
+                        class="btn"
+                        href="mailto:sahilsinghsks@gmail.com?subject=Hello%20Sahil&body=Hi%20Sahil%2C%0A%0A"
+                        onclick="window.location.href=this.href; return false;"
+                >
+                    Email
+                </a>
+
+                <a
+                        class="btn"
+                        href="https://linkedin.com/in/sahilju"
+                        target="_blank"
+                        rel="noreferrer"
+                >
+                    LinkedIn
+                </a>
+
+                <a
+                        class="btn"
+                        href="https://github.com/sahilsayshello"
+                        target="_blank"
+                        rel="noreferrer"
+                >
+                    GitHub
+                </a>
+
+                <a
+                        class="btn"
+                        href="https://www.instagram.com/grou_ndzeroreporting/"
+                        target="_blank"
+                        rel="noreferrer"
+                >
+                    Instagram
+                </a>
+                <a
+                        class="btn"
+                        href="https://drive.google.com/file/d/1bz_cHch95m5f2FJdtAXiCF-n7hFYTwkj/view"
+                        target="_blank"
+                        rel="noreferrer"
+                >
+                    Resume
+                </a>
+
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        © <span id="year"></span> Sahil Kumar Singh · Built with plain HTML
+    </footer>
+</main>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
